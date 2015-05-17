@@ -1,12 +1,24 @@
+
+$(document).ready(function() {
+	var IDs = [];
+$("#faces").find("img").each(function(){ IDs.push(this.id); });
+   /*movement('TO');*/for (var i=0; i<IDs.length; i++) {
+   		movement(IDs[i]);
+   }
+});
+
+
+
 function movement(id) {
-		$(document).mousemove(function(event) {
-			var div = document.getElementById (id);
-			var rect = div.getBoundingClientRect ();
-			//rect.top = rect.top + $('#' + id).scrollTop();
+	
+	$(document).mousemove(function(event) {	
+
 			var top = $('#' + id).offset().top;
 			var left = $('#' + id).offset().left;
 			var right = left + 188;
 			var bottom = top + 188;
+
+	//$( "#faces" ).children( ".photo" )
 
     if(event.pageX > right-62) { 
  	$('#' + id).attr("src", "photos/" + id + "r.jpg");
