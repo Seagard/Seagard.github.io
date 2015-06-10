@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	var IDs = [];
 	$("#faces").find("img").each(function(){ IDs.push(this.id); });
-   for (var i=0; i<IDs.length; i++) {
+   	for (var i=0; i<IDs.length; i++) {
    		movement(IDs[i]);
    }
 });
