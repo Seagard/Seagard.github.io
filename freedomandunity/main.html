@@ -2,31 +2,26 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
   <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script>
-
    $(document).ready(function(){
       $('body').mousemove(function(e){
-
         var amountMovedX = (e.pageX * -1/80 );
         var amountMovedY = (e.pageY * -1/80 );
     $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-     });
   });
-
+    });
   </script>
-	
 </head>
-<body class="tint">
-	<nav class="navbar navbar-default" role="navigation">
+<body>
+	<nav class="navbar navbar-default" role="custom-dropdown">
   <div class="container-fluid" id="themenu">
+ <input type="checkbox" id="button">
+    <label for="button" onclick></label>
 	<ul class="nav navbar-nav" id="lol" >
   <li ><a href="#home">Партнеры</a></li>
   <li ><a href="#news">Новости</a></li>
@@ -54,12 +49,11 @@
   <div ><img src="pic/re/line.png"></div>
   <p> <b>Что мы делаем:</b> <p>
   </div>
-
 </div>
+
 <div class="col-md-3">
    <div class="sidebar-nav">
-      <nav class="navbar navbar-default">
-        
+      <nav class="navbar navbar-default">   
           <ul class="nav navbar-nav" id="social">
             <li><a href="#"><div id="first" class="icon"></div></a></li>
             <li><a href="#"><div id="second" class="icon" ></div></a></li>
@@ -68,16 +62,12 @@
             <li><a href="#"><div id="fifth" class="icon" ></div></a></li>
             <li><a href="#"><div id="sixth" class="icon"></div></a></li>
             <li><a href="#"><div id="seventh" class="icon"></div></a></li>
-          </ul>
-        
+          </ul>      
       </nav>
     </div>
   </div>
 </div>
 </div>
-
-
-
 
 <div class="container" id="sheet">
 <table class='table'>

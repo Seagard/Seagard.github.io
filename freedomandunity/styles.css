@@ -1,6 +1,11 @@
+html, body {
+    bottom:0;
+    right:0;
+}
+
 @media screen and (min-width: 1920px){
   #lol {
-    width: 72%;
+    width: 68%;
   }
 
   .table {
@@ -28,9 +33,9 @@
 
 }
 
-@media screen and (max-width: 1234px){
+@media screen and (max-width: 1280px){
   #lol {
-    width: 81.5%;
+    width: 82%;
   }
 }
 
@@ -42,16 +47,9 @@
   }
 }
 
-
-@media screen and (max-width: 1159px){
+@media screen and (max-width: 1166px){
   #lol {
-    width: 85%;
-  }
-}
-
-@media screen and (max-width: 1093px){
-  #lol {
-    width: 90%;
+    width: 95%;
   }
 
   .table {
@@ -61,7 +59,7 @@
   }
 }
 
-@media screen and (max-width: 1033px){
+@media screen and (max-width: 1067px){
   #lol {
     width: 95%;
   }
@@ -114,10 +112,6 @@
   }
 }
 
-#lol {
-
-}
-
 ul {
     list-style-type: none;
     position : relative;
@@ -133,7 +127,6 @@ ul {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  position: fixed;
   width: 100%;
 }
 
@@ -155,11 +148,15 @@ ul {
 }
 
 #themenu li:hover {
-  background-color:  #008080;
+  background-color: yellow;
+}
+
+#themenu li:hover a {
+  color: blue;
+  text-decoration: none;
 }
 
 .navbar-nav {
-  /*width: 100%;*/
   float: none;
   display: inline-block;
 }
@@ -168,51 +165,32 @@ ul {
   text-align: center;
 }
 
-body {
-  background:
-  linear-gradient(
-    rgba(0, 26, 41, 0.5), 
-    rgba(0, 26, 41, 0.5)
-    ),
-    url("pic/re/skycopy.jpg");
+body {  
+    background:
+    linear-gradient(rgba(0, 26, 41, 0.5), rgba(0, 26, 41, 0.5)),
+    url("pic/re/skycopy.jpg") no-repeat, 
+    linear-gradient(to bottom, #1f3567, #475c93) repeat;
     background-position: left top;
   	background-size: auto 110%;
   	background-attachment: fixed;
   	min-height: 100%;
   	min-width: 100%;
    font-family: 'Roboto', sans-serif !important;
-}
 
+}
 
 .navbar {
 	background-color: transparent;
 	border: none;
-  	margin-right: auto;
-   	text-align: center;
-   	position: relative;
-   	overflow: hidden;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 
 .row {
 	margin: 0;
-}
-
-h1 {
-	color: white;
-	margin-top: 0px;
-	margin-bottom: 4px;
-}
-
-h3 {
-	margin-top: 9px;
-	color: white;
-}
-
-h4 {
-	color: white;
-	margin-bottom: 2px;
-	margin-top: 0px;
 }
 
 p {
@@ -233,8 +211,13 @@ p {
   border-bottom: 1px dashed white;
 }
 
+.table > tbody > tr > td > a:hover {
+  color: yellow;
+  border-bottom: none;
+  text-decoration: none;
+}
+
 #main {
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4%;
@@ -268,10 +251,6 @@ p {
   margin-right: auto;
   margin-top: 7%;
  }
-
-#menu li.li-no-hover:hover {
-	background-color:  transparent;
-}
 
 a {
 	color: white;
@@ -367,4 +346,62 @@ a {
 #left {
 	width: 50%;
 	margin-left: 25%;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+label {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav[role="custom-dropdown"] a,
+nav[role="custom-dropdown"] label {
+  color: #ccc;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 846px) {
+  nav[role="custom-dropdown"] ul {
+    display: none;
+    height: 100%;
+  }
+
+  nav[role="custom-dropdown"] label {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: .45em;
+    font-size: 1.1em;
+    margin: 0;
+  }
+
+  nav[role="custom-dropdown"] label:after {
+    position: absolute;
+    right: .25em;
+    top: 0;
+    content: "\2261";
+    font-size: 1.8em;
+  }
+
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ label:after {
+    color: yellow;
+  }
+
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul {
+    position: relative;
+    display: block;
+  }
+
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul > li {
+    width: 100%;
+    opacity: .8;
+    text-align: left;
+  }
 }
